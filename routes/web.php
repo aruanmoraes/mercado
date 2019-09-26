@@ -23,9 +23,21 @@ Route::prefix('clientes')->group(function() {
     Route::get('{id}/edit', 'ClienteController@edit');
     Route::put('{id}', 'ClienteController@update');
     Route::delete('{id}', 'ClienteController@destroy');
-    Route::get('{id}/compras', 'EmprestimoController@index');
+    Route::get('{id}/compras', 'CompraController@index');
 });
-Route::prefix('emprestimos')->group(function() {
-    Route::get('create', 'EmprestimoController@create');
-    Route::post('/', 'EmprestimoController@store');
+
+Route::prefix('produtos')->group(function() {
+    Route::get('/', 'ProdutoController@index');
+    Route::get('create', 'ProdutoController@create');
+    Route::post('/', 'ProdutoController@store');
+    Route::get('{id}/edit', 'ProdutoController@edit');
+    Route::put('{id}', 'ProdutoController@update');
+    Route::delete('{id}', 'ProdutoController@destroy');
+    Route::get('{id}/compras', 'CompraController@index');
+});
+
+Route::prefix('compras')->group(function() {
+   // Route::get('/', 'CompraController@index');
+    Route::get('create', 'CompraController@create');
+    Route::post('/', 'CompraController@store');
 });

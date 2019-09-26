@@ -17,13 +17,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand d-flex align-items-center" href="#">
-            <a href="{{url('/')}}" class="ml-2"><b>MERCADO</b></a>
+            <a href="{{url('/')}}" class="ml-2"><b>MERCADO - CRUD ARUAN</b></a>
         </a>
 
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="{{url('clientes')}}">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('produtos')}}">Produtos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('compras/create')}}">Compras</a>
             </li>
         </div>
     </nav>

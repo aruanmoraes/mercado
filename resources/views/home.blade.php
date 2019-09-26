@@ -20,7 +20,7 @@
 
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header">COMPRAS</div>
+                    <div class="card-header">Compras</div>
                     <div class="card-body">
                         {{$data['compras']}}
                     </div>
@@ -29,7 +29,7 @@
 
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header">PRODUTOS</div>
+                    <div class="card-header">Produtos</div>
                     <div class="card-body">
                         {{$data['produtos']}}
                     </div>
