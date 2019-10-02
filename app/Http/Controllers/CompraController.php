@@ -13,7 +13,8 @@ class CompraController extends Controller
             $data = [
                 'cliente' => Cliente::findOrFail($id)
             ];
-            return view('compras.index', compact('data'));
+           return view('compras.index', compact('data'));
+           //return $data;
             
         }
 
@@ -35,7 +36,7 @@ class CompraController extends Controller
                 ]);
              
 
-                $compra->produto()->attach($request['produto']);
+                $compra->produto()->attach($request['produtos']);
 
                 DB::commit();
                 return redirect('clientes')->with('success', 'Compra realizado com sucesso!');
