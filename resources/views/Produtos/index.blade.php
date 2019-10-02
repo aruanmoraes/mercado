@@ -7,7 +7,7 @@
         <div class="col-md-12">
             <div class="text-right">
                 <a href="{{url('produtos/create')}}" class="btn btn-success">Novo Produto</a>
-                <a href="{{url('emprestimos/create')}}" class="btn btn-primary">Nova Compra</a>
+                <a href="{{url('compras/create')}}" class="btn btn-primary">Nova Compra</a>
             </div>
         </div>
 

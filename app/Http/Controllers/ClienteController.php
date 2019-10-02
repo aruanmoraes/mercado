@@ -29,7 +29,7 @@ class ClienteController extends Controller
             'url' => 'clientes',
             'method' => 'POST',
         ];
-        return view('clientes.form', compact('data'));
+        return view('Clientes.form', compact('data'));
     }
 
      /**

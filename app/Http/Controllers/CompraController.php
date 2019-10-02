@@ -30,7 +30,6 @@ class CompraController extends Controller
             try {
             
                 $compra = Compra::create([
-                    'nome' => $request['compra']['nome'],
                     'data' => $request['compra']['data'],
                     'cliente_id' => $request['compra']['cliente_id']
                 ]);

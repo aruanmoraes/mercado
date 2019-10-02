@@ -16,4 +16,19 @@ class Compra extends Model
     public function cliente() {
         return $this->belongsTo('App\Cliente');   
     }
+
+    public function getData($val) {
+        return implode('/', array_reverse(explode('-', $val)));
+    } 
+
+    public function produto(){
+        return $this->belongsToMany('App\Produto', 'produto_has_compra')
+                    ->withPivot('quantidade');
+    }
+
+    public function setDataAttribute($val) {
+        $this->attributes['data'] = implode('-', array_reverse(explode('/', $val)));
+        
+    }
+  
 }

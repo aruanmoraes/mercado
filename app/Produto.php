@@ -12,5 +12,9 @@ class Produto extends Model
 
     protected $fillable = ['nome','valor'];
     
-   
+ 
+    public function compra (){
+    
+       return $this->belongsToMany('App\Compra', 'produto_has_compra')->withPivot('quantidade');
+    }
 }
