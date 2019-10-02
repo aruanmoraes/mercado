@@ -38,9 +38,10 @@ class CompraController extends Controller
                 $compra->produto()->attach($request['produto']);
 
                 DB::commit();
-                return redirect('compras/create')->with('success', 'Compra realizado com sucesso!');
+                return redirect('clientes')->with('success', 'Compra realizado com sucesso!');
             } catch(\Exception $e) {
                 DB::rollback();
+                dd($e);
                 return redirect('compras/create')->with('error', 'Erro no servidor! Compra não realizado!'); 
             }
         }
